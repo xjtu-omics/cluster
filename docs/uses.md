@@ -4,7 +4,7 @@
 联系管理员创建账号密码（如zhangsan/123456）
 ## 2. 远程客户端及传输软件安装
 ### 2.1 下载及安装
-推荐Xshell和Xftp
+推荐Xshell和Xftp  
 下载地址：https://www.netsarang.com/zh/free-for-home-school/
 ### 2.2 连接
 以Xshell为例，打开软件,点击左上角 ‘新建’，依次填写名称、主机及端口号
