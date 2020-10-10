@@ -21,6 +21,9 @@ Xftp类同。
 | 属性 | Queue | nodes | memory | cpu | storage |
 | ------ | ------ | ------ | ------| ------| ------ |
 | 数量 | 2 | 15 | 11 | 640C | 676T |
+
+queue目前有两个：batch和fat。   
+
 ### 3.2 集群拓扑结构
 ![Pandao editor.md](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/struct.png "Pandao editor.md")
 ## 4. 集群操作
