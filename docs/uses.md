@@ -76,7 +76,7 @@ qsub MyPBS.pbs
 ```
 qstat -an
 ```
-### 5.3 删除任务
+### 5.4 删除任务
 ```
 qdel YourJobID
 ```
