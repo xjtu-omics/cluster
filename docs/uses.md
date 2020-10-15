@@ -54,6 +54,8 @@ pbs文件实例，cat MyPBS.pbs
 #!/bin/bash
 
 ### Set job name，for example MyPBS  
+#PBS -l walltime=9000:00:00
+#PBS -V
 #PBS -N MyPBS
 
 ### set output files
