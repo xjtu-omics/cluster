@@ -68,8 +68,8 @@ pbs脚本示例说明
 &nbsp;	<jobname>		表示作业名称，必填	   
 &nbsp;	<queuename>		表示 队列名称（当前集群已设置的队列：batch），必填   
 &nbsp;	<workdir>		表示 工作路径     
-&nbsp;	<path_outfile>	        表示 标准输出文件路径及名称    
-&nbsp;	<path_errfile>   	表示 错误输出文件路径及名称   
+&nbsp;	<hh:mm:ss>		表示 标准输出文件路径及名称    
+&nbsp;	<path_errfile>		表示 错误输出文件路径及名称   
 &nbsp;	<num_n>			表示 节点数量，必填    
 &nbsp;	<num_p>			表示 核心数量，必填      
 &nbsp;	<hh:mm:ss>		表示 作业运行时间   
