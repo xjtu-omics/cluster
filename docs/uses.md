@@ -53,26 +53,26 @@ pbs文件实例，cat MyPBS.pbs
 
 #!/bin/bash
 
-### Set job name，for example MyPBS  
-#PBS -l walltime=9000:00:00
-#PBS -V
-#PBS -N MyPBS
+#PBS -N <jobname>
+#PBS -q <queuename>
+#PBS -d <workdir>
+#PBS -o <path_outfile>
+#PBS -e <path_errfile>
+#PBS -l nodes=<num_n>:ppn=<num_p>,walltime=<hh:mm:ss>
 
-### set output files
-#PBS -o MyPBS.stdout       
-#PBS -e MyPBS.stderr     
+<the content>
 
-### set queue name  
-#PBS -q batch
-
-###set number of nodes,for example one node with 4 cpu.And you can specify the node: #PBS -l nodes=cu01:ppn=4 
-
-#PBS -l nodes=1:ppn=4 
-#the following is you own code
-samtools index pb.map.bam
-…..
-
-```
+```   
+说明：   
+  <jobname>		表示作业名称，必填	   
+	<queuename>		表示 队列名称（当前集群已设置的队列：batch），必填   
+	<workdir>		表示 工作路径     
+	<path_outfile>	    表示 标准输出文件路径及名称    
+	<path_errfile>   	表示 错误输出文件路径及名称   
+	<num_n>			表示 节点数量，必填    
+	<num_p>			表示 核心数量，必填      
+	<hh:mm:ss>		表示 作业运行时间   
+	<the content>	表示 需要执行的命令、程序，必填   
 ### 5.2 提交任务
 ```
 qsub MyPBS.pbs
@@ -94,7 +94,7 @@ qdel YourJobID
 ★ 注意程序生成文件的路径，务必放在自己的目录下，如果不慎放在其他目录，及时删除；   
 ★ 资源按需申请，避免浪费；     
 ★ 不得随意创建定时任务；   
-★ 一般使用队列batch，如需使用fat队列需提前告知相关老师；      
+★ 一般使用队列batch，如需使用fat队列需提前与其他用户沟通过；      
 ★ 如执行vnodes显示资源充足，但是提交作业后一直处于排队状态，联系管理员刷新资源管理器，释放资源；    
 ★ 如果作业运行时间较长，定时检查自己的作业是否有卡死或者极大消耗内存的问题，并及时删除有问题的作业；   
 ★ 批量提交作业时，先少量测试，没有问题再大量提交；   
