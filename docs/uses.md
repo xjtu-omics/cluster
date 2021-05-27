@@ -63,8 +63,8 @@ pbs脚本示例说明
 <the content>
 
 ```   
-说明：    
-&emsp;
+说明：   &emsp; 
+
 &nbsp;	<jobname>		表示作业名称，必填	   
 &nbsp;	<queuename>		表示 队列名称（当前集群已设置的队列：batch），必填   
 &nbsp;	<workdir>		表示 工作路径     
