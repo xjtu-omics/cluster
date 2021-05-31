@@ -9,5 +9,14 @@
          执行systemctl restart pbs_server，systemctl restart maui，systemctl restart trqauthd.service重启manager上的服务
          提交任务正常。
 
+  ## 日期：5月31日    
+日志：集群失联   
+具体描述：ssh manager节点无反应，可以ping通
+解决办法：sbwang用户的进程占了大量的cpu和内存导致manager节点死机，重启后发现进程仍然存在，不久后manager节点又死机，其他计算节点也有相同问题。
+         截图如下manager节点执行clush -b -w node[1-14],gpu1,fat1 'df -h |grep data' 查看挂载是否正常，显示正常   
+         执行：clush -b -w node[1-14],gpu1,fat1 systemctl restart pbs_mom重启pbs_mom服务
+         执行systemctl restart pbs_server，systemctl restart maui，systemctl restart trqauthd.service重启manager上的服务
+         提交任务正常。
+
 
 
