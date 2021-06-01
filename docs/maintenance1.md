@@ -15,9 +15,13 @@
 解决办法：sbwang用户的进程占了大量的cpu和内存导致manager节点死机，重启后发现进程仍然存在，不久后manager节点又死机，其他计算节点也有相同问题，所有节点上有定时任务。   
          重启manager和login节点后注意重启服务和重新挂载   
          截图如下：   
-         
+         sbwang有很多accepting connections进程消耗了很多CPU和内存
+![Pandao editor.md](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/PID.png "Pandao editor.md")   
+         sbwang用户下的定时任务（每个节点上都有）   
 ![Pandao editor.md](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/crontab.png "Pandao editor.md")   
+           
 ![Pandao editor.md](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/crontab1.png "Pandao editor.md")    
+         进程删除后立马重现   
 ![Pandao editor.md](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/nodes.png "Pandao editor.md")    
 
 
