@@ -11,9 +11,8 @@
 
   ## 日期：5月31日    
 日志：集群失联   
-具体描述：ssh manager节点无反应，可以ping通
-解决办法：sbwang用户的进程占了大量的cpu和内存导致manager节点死机，重启后发现进程仍然存在，不久后manager节点又死机，其他计算节点也有相同问题，所有节点上有定时任务。   
-         重启manager和login节点后注意重启服务和重新挂载   
+具体描述：ssh manager节点无反应，可以ping通,sbwang用户的进程占了大量的cpu和内存导致manager节点死机，重启后发现进程仍然存在，不久后manager节点又死机，其他计算节点也有相同问题，所有节点上sbwang有定时任务。   
+解决办法：重启manager和login节点后注意重启服务和重新挂载，删除每个节点上sbwang的定时任务（需su到sbwang用户），删除sbwang用户的所有进程（killall -u sbwang），删除sbwang用户目录下的所有可疑文件。        
          截图如下：   
          sbwang有很多accepting connections进程消耗了很多CPU和内存
 ![Pandao editor.md](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/PID.png "Pandao editor.md")   
