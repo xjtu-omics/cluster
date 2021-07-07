@@ -24,11 +24,22 @@
 ![Pandao editor.md](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/nodes.png "Pandao editor.md")    
 
 
+## 日期：7月1日    
+日志：pestat 显示fat1 dowm   
+具体描述：pestat 显示fat1 dowm,ssh无反应      
+解决办法：在manager节点上重启pbs_server服务。   
+
+## 日期：7月2日    
+日志：众多计算节点根目录使用率超过85%    
+具体描述：由于有用户操作docker，docker的overlay2目录在计算节点的根目录挂载，目录大小50G，容器启动后很容易沾满。     
+解决办法：执行：docker system df 查看docker磁盘使用情况，执行docker system prune -a删除镜像及日志。   
+![Pandao editor.md](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/storage.png "Pandao editor.md")    
 
 ## 日期：7月7日    
-日志：node1和node2节点手动释放内存失败（echo 3 > /proc/sys/vm/drop_caches） 
+日志：node1和node2节点手动释放内存失败（echo 3 > /proc/sys/vm/drop_caches）   
 具体描述：node1和node2在无作业、无进程运行情况下，内存占用如下图所示。   
 ![Pandao editor.md](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/node1.png "Pandao editor.md")    
 解决办法：1）应该是之前有多个进程使用了共享内存，这些进程停止或者异常停止后，内存未能正常释放，导致这些共享内存一直处于被占用状态，无法正常使用；    
          2）被共享的内存无法被drop_caches处理，所以没法手动释放。
-         最终reboot解决，切记reboot之后重新挂载/data目录。
+         最终reboot解决，切记reboot之后重新挂载/data目录。    
+        
