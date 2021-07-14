@@ -12,8 +12,7 @@
   ## 日期：5月31日    
 日志：集群失联   
 具体描述：ssh manager节点无反应，可以ping通,sbwang用户的进程占了大量的cpu和内存导致manager节点死机，重启后发现进程仍然存在，不久后manager节点又死机，其他计算节点也有相同问题，所有节点上sbwang有定时任务。   
-解决办法：重启manager和login节点后注意重启服务和重新挂载，删除每个节点上sbwang的定时任务（需su到sbwang用户），删除sbwang用户的所有进程（killall -u sbwang），删除sbwang用户目录下的所有可疑文件。        
-         截图如下：   
+解决办法：重启manager和login节点后注意重启服务和重新挂载，删除每节点上sbwang的定时任务（需su到sbwang用户），删除sbwang用户的所有进程（killall -u sbwang），删除sbwang用户目录下的所有可疑文。                 截图如下：   
          sbwang有很多accepting connections进程消耗了很多CPU和内存
 ![Pandao editor.md](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/PID.png "Pandao editor.md")   
          sbwang用户下的定时任务（每个节点上都有）   
@@ -43,3 +42,7 @@
          2）被共享的内存无法被drop_caches处理，所以没法手动释放。
          最终reboot解决，切记reboot之后重新挂载/data目录。    
         
+## 日期：7月12-713日    
+日志：ssh oss1 无反应   
+具体描述：多次开关机后,ping不通oss1.   
+解决办法：进机房收集硬件日志：将笔记本连接到交换机，配置一个192.168.100字段的IP，火狐浏览器进入地址：https://192.168.100.21 ,账号密码：admin/Password@_ 进入之后点击“一键收集”--》“下载全部日志”，交给兴华三硬件处理。最终问题是阵列卡有问题，换取硬件。    
