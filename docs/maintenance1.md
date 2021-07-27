@@ -46,3 +46,15 @@
 日志：ssh oss1 无反应   
 具体描述：多次开关机后,ping不通oss1.   
 解决办法：进机房收集硬件日志：将笔记本连接到交换机，配置一个192.168.100字段的IP，火狐浏览器进入地址：https://192.168.100.21 ,账号密码：admin/Password@_ 进入之后点击“一键收集”--》“下载全部日志”，交给兴华三硬件处理。最终问题是阵列卡有问题，换取硬件。    
+
+## 日期：7月19日      
+日志：fat1时间不同步   
+具体描述：开机重启后fat1时间总会从6月18号开始
+解决办法：ssh fat1 设置时间，执行date -s 10:12:00 、date -s 7/27/2021,后动同步。注意必须先设置时间再设置日期。   
+
+
+## 日期：7月20—23日      
+日志：node1、node2及fat1执行完任务之后不自动释放内存    
+具体描述：执行sync和echo 3 > /proc/sys/vm/drop_caches也不释放
+解决办法：显示重启。随后又遇到了相同的问题，找特殊任务，发现有一个'shasta'任务在执行完之后需要执行命令来释放内训，提交作业的用户没有执行，最终执行解决问题。   
+![Pandao editor.md](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/shasta.png "Pandao editor.md")
