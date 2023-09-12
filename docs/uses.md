@@ -21,21 +21,21 @@ Xftp类同。
 
 兴庆集群
 
-| 属性 | Queue | nodes | memory | cpu | storage |
+| 属性 | Queue | nodes | cpu | storage |
 | ------ | ------ | ------ | ------| ------| ------ |
-| 数量 | 2 | 15 | 11 | 640C | 476T |   
+| 数量 | 2 | 15 | 640C | 476T |   
 
 创新港集群
-| 属性 | Queue | nodes | memory | cpu | storage |
+| 属性 | Queue | nodes | cpu | storage |
 | ------ | ------ | ------ | ------| ------| ------ |
-| 数量 | 2 | 16 | 11 | 1000C | 757T | 
+| 数量 | 2 | 16 | 1000C | 757T | 
 
 queue目前有两个：batch和fat，fat的内存较大、CPU核数较多。   
 
 ### 3.2 集群拓扑结构
-兴庆集群
+兴庆集群   
 ![Image](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/struct.png)   
-创新港集群
+创新港集群   
 ![Image](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/cxg_cluster.png)   
 ## 4. 集群操作
 ### 4.1 集群常用命令
