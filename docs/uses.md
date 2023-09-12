@@ -18,11 +18,18 @@ Xftp类同。
 ## 3. 集群概况
 ### 3.1 集群资源
 
+兴庆集群
+
 | 属性 | Queue | nodes | memory | cpu | storage |
 | ------ | ------ | ------ | ------| ------| ------ |
-| 数量 | 2 | 15 | 11 | 640C | 476T |
+| 数量 | 2 | 15 | 11 | 640C | 476T |   
 
-queue目前有两个：batch和fat，fat的内存较大。   
+创新港集群
+| 属性 | Queue | nodes | memory | cpu | storage |
+| ------ | ------ | ------ | ------| ------| ------ |
+| 数量 | 2 | 16 | 11 | 1000C | 757T | 
+
+queue目前有两个：batch和fat，fat的内存较大、CPU核数较多。   
 
 ### 3.2 集群拓扑结构
 ![Image](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/struct.png)
