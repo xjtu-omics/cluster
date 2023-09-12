@@ -11,7 +11,8 @@
 
 | 名称 | 主机 | 端口号 |
 | ------ | ------ | ------ |
-| 自定义 | *.*.*.* | 22 |
+| 自定义 | 192.168.20.4 | 22 |
+| 自定义 | 10.181.7.169 | 65533 |
 
 点击左上角的“用户身份验证”，依次填写管理员提供的用户名和密码，点击确定，连接成功。   
 Xftp类同。
@@ -32,7 +33,10 @@ Xftp类同。
 queue目前有两个：batch和fat，fat的内存较大、CPU核数较多。   
 
 ### 3.2 集群拓扑结构
-![Image](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/struct.png)
+兴庆集群
+![Image](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/struct.png)   
+创新港集群
+![Image](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/cxg_cluster.png)   
 ## 4. 集群操作
 ### 4.1 集群常用命令
 ```
