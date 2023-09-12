@@ -33,8 +33,11 @@ Xftp类同。
 queue目前有两个：batch和fat，fat的内存较大、CPU核数较多。   
 
 ### 3.2 集群拓扑结构
+
+兴庆集群
  
 ![Image](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/struct.png)   
+创新港集群
 
 ![Image](https://raw.githubusercontent.com/xjtu-omics/cluster/main/pictures/cxg_cluster.png)   
 ## 4. 集群操作
