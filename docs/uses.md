@@ -76,6 +76,15 @@ pbs脚本示例说明
 
 <the content>
 
+For example:
+#!/bin/bash
+
+#PBS -N test_1
+#PBS -q batch
+#PBS -l nodes=1:ppn=24,walltime=24:00:00
+
+<the content>
+
 ```   
 说明：
 ``` 
